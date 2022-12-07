@@ -1,0 +1,31 @@
+/* Gives the buttons space, borders, size, shape, curser icon when over it, etc. */
+.btn {
+    width: 100%;
+    border: 3px solid black;
+    background: none;
+    aspect-ratio: 1 / 1;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 5;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+/* For when the correct letter is used */
+.btn.active {
+    background-color: hsl(200, 100%, 50%);
+    color: white;
+}
+/* For when the wrong letter is used */
+.btn.inactive {
+    opacity: .3;    
+}
+
+/* When a button (letter) is already chosen, it becomes disabled as so to prevent it from being clicked on again.
+The following class will highlight buttons that the mouse is over if they aren't already disabled */
+.btn:hover:not(:disabled),
+.btn:focus:not(:disabled) {
+    opacity: .3;
+    background-color: hsl(200, 100%, 50%);
+}
+
